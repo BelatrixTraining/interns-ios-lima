@@ -15,6 +15,10 @@ class PlatosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var allPlatos:[Plato] = []
     
     // MARK: - Ciclo de Vida
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setar la pantalla con valores
@@ -43,6 +47,7 @@ class PlatosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     deinit {
         
     }
+
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView,
@@ -61,11 +66,35 @@ class PlatosViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cell
         }
         let plato = allPlatos[indexPath.row]
-        platoCell.nombreLabel.text = plato.nombre
-        platoCell.detalleLabel.text = plato.detalle
-        platoCell.precioLabel.text = plato.precio.description
-        platoCell.platoImageView.image = UIImage(named: plato.nombreImagen)
+        platoCell.plato = plato
         return platoCell
+    }
+    
+    // MARK: - Navegacion
+    override func shouldPerformSegue(withIdentifier identifier: String
+        , sender: Any?) -> Bool {
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinoVC = segue.destination as? PlatoInfoViewController,
+            let cell = sender as? PlatoTableViewCell {
+            destinoVC.plato = cell.plato
+        }
+    }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let platoInfoVC = storyboard.instantiateViewController(withIdentifier: "PlatoInfoViewController")
+        
+        if let destinoVC = platoInfoVC as? PlatoInfoViewController {
+            let plato = allPlatos[indexPath.row]
+            destinoVC.plato = plato
+            
+            self.navigationController?.pushViewController(destinoVC, animated: true)
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Plato: NSObject {
     
@@ -15,6 +16,11 @@ class Plato: NSObject {
     var nombre:String = ""
     var detalle:String = ""
     var nombreImagen:String = ""
+    
+    // MARK: - Computed properties
+    var imagen:UIImage? {
+        return UIImage(named: self.nombreImagen)
+    }
     
     // MARK: - Constructores
     override init() {

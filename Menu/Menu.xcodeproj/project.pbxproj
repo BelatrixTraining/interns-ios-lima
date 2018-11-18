@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691794AF21A0700500D88DEA /* PlatoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691794AE21A0700500D88DEA /* PlatoInfoViewController.swift */; };
+		691794B121A0832000D88DEA /* PromocionesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691794B021A0832000D88DEA /* PromocionesFactory.swift */; };
 		69CC1C25219723FB007D286D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1C24219723FB007D286D /* AppDelegate.swift */; };
 		69CC1C2A219723FB007D286D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CC1C28219723FB007D286D /* Main.storyboard */; };
 		69CC1C2C219723FC007D286D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CC1C2B219723FC007D286D /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		691794AE21A0700500D88DEA /* PlatoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatoInfoViewController.swift; sourceTree = "<group>"; };
+		691794B021A0832000D88DEA /* PromocionesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocionesFactory.swift; sourceTree = "<group>"; };
 		69CC1C21219723FB007D286D /* Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CC1C24219723FB007D286D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CC1C29219723FB007D286D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 				69CC1C2B219723FC007D286D /* Assets.xcassets */,
 				69CC1C30219723FC007D286D /* Info.plist */,
 				69CC1C3E21974398007D286D /* PlatosFactory.swift */,
+				691794B021A0832000D88DEA /* PromocionesFactory.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				69CC1C3921973ECA007D286D /* PlatosViewController.swift */,
+				691794AE21A0700500D88DEA /* PlatoInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				69CC1C3F21974398007D286D /* PlatosFactory.swift in Sources */,
 				69CC1C3A21973ECA007D286D /* PlatosViewController.swift in Sources */,
 				69CC1C3D21973F78007D286D /* PlatoTableViewCell.swift in Sources */,
+				691794B121A0832000D88DEA /* PromocionesFactory.swift in Sources */,
+				691794AF21A0700500D88DEA /* PlatoInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
